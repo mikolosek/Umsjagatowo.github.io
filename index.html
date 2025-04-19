@@ -7,24 +7,36 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #fff;
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #fff;
+      background: url('https://images.unsplash.com/photo-1581093588401-05d1f9e9fccc?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
     }
 
     header {
-      background-color: #d32f2f;
       padding: 20px;
       text-align: center;
-      color: white;
     }
 
     header img {
-      width: 300px;
+      width: 250px;
       height: auto;
       display: block;
       margin: 0 auto 10px;
+    }
+
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 2em;
+      color: #fff;
     }
 
     main {
@@ -40,38 +52,40 @@
     }
 
     footer {
-      background-color: #f5f5f5;
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 20px;
       text-align: center;
       font-size: 0.95em;
-      color: #666;
+      color: #ddd;
     }
 
     .contact {
       font-weight: bold;
-      color: #d32f2f;
+      color: #ffcccb;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="logo.png" alt="Logo UMS Jagatowo">
-    <h1>Uniwersytet Młodego Strażaka</h1>
-  </header>
+  <div class="overlay">
+    <header>
+      <img src="logo.png" alt="Logo UMS Jagatowo">
+      <h1>Uniwersytet Młodego Strażaka</h1>
+    </header>
 
-  <main>
-    <div class="statement">
-      <p>Domena <strong>umsjagatowo.pl</strong> jest własnością naszej organizacji non-profit 
-        (<em>ang. Young Firefighter University</em>) i wykorzystujemy ją na potrzeby naszego <strong>Google Nonprofits Workspace</strong>.
-      </p>
-    </div>
-    <p>Nasze stowarzyszenie skupia dzieci i młodzież, ucząc ich podstaw <strong>pierwszej pomocy</strong> oraz zasad <strong>ochrony przeciwpożarowej</strong>.</p>
-  </main>
+    <main>
+      <div class="statement">
+        <p>Domena <strong>umsjagatowo.pl</strong> jest własnością naszej organizacji non-profit 
+          (<em>ang. Young Firefighter University</em>) i wykorzystujemy ją na potrzeby naszego <strong>Google Nonprofits Workspace</strong>.
+        </p>
+      </div>
+      <p>Nasze stowarzyszenie skupia dzieci i młodzież, ucząc ich podstaw <strong>pierwszej pomocy</strong> oraz zasad <strong>ochrony przeciwpożarowej</strong>.</p>
+    </main>
 
-  <footer>
-    Kontakt: <span class="contact">kontakt@umsjagatowo.pl</span>
-  </footer>
+    <footer>
+      Kontakt: <span class="contact">kontakt@umsjagatowo.pl</span>
+    </footer>
+  </div>
 
 </body>
 </html>
