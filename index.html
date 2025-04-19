@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UMS Jagatowo</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -19,7 +23,6 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
     header {
@@ -35,11 +38,16 @@
     }
 
     main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      text-align: center;
       flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main-content {
+      max-width: 800px;
     }
 
     .statement {
@@ -63,16 +71,6 @@
       gap: 8px;
     }
 
-    .footer-logo {
-      margin-top: 15px;
-    }
-
-    .footer-logo img {
-      width: 80px;
-      height: auto;
-      opacity: 0.8;
-    }
-
     .social {
       margin-top: 10px;
     }
@@ -90,6 +88,16 @@
       text-decoration: underline;
     }
 
+    .footer-logo {
+      margin-top: 20px;
+    }
+
+    .footer-logo img {
+      width: 80px;
+      height: auto;
+      opacity: 0.8;
+    }
+
     .icon {
       width: 18px;
       height: 18px;
@@ -105,12 +113,14 @@
     </header>
 
     <main>
-      <div class="statement">
-        <p>Domena <strong>umsjagatowo.pl</strong> jest własnością naszej organizacji non-profit 
-          (<em>ang. Young Firefighter University</em>) i wykorzystujemy ją na potrzeby naszego <strong>Google Nonprofits Workspace</strong>.
-        </p>
+      <div class="main-content">
+        <div class="statement">
+          <p>Domena <strong>umsjagatowo.pl</strong> jest własnością naszej organizacji non-profit 
+            (<em>ang. Young Firefighter University</em>) i wykorzystujemy ją na potrzeby naszego <strong>Google Nonprofits Workspace</strong>.
+          </p>
+        </div>
+        <p>Nasze stowarzyszenie skupia dzieci i młodzież, ucząc ich podstaw <strong>pierwszej pomocy</strong> oraz zasad <strong>ochrony przeciwpożarowej</strong>.</p>
       </div>
-      <p>Nasze stowarzyszenie skupia dzieci i młodzież, ucząc ich podstaw <strong>pierwszej pomocy</strong> oraz zasad <strong>ochrony przeciwpożarowej</strong>.</p>
     </main>
 
     <footer>
@@ -121,9 +131,7 @@
         </svg>
         kontakt@umsjagatowo.pl
       </div>
-      <div class="footer-logo">
-        <img src="logo.png" alt="Logo UMS Jagatowo">
-      </div>
+
       <div class="social">
         <a href="https://www.facebook.com/mdp.ddp.jagatowo" target="_blank">
           <!-- Ikona Facebooka -->
@@ -132,6 +140,10 @@
           </svg>
           Facebook
         </a>
+      </div>
+
+      <div class="footer-logo">
+        <img src="logo.png" alt="Logo UMS Jagatowo">
       </div>
     </footer>
   </div>
