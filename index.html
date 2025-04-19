@@ -17,24 +17,19 @@
     .overlay {
       background-color: rgba(0, 0, 0, 0.6);
       min-height: 100vh;
-      padding: 0;
-      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     header {
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 20px;
       text-align: center;
     }
 
-    header img {
-      width: 120px;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px;
-    }
-
     header h1 {
-      margin: 10px 0 0;
+      margin: 0;
       font-size: 2em;
       color: #fff;
     }
@@ -44,6 +39,7 @@
       margin: 40px auto;
       padding: 20px;
       text-align: center;
+      flex-grow: 1;
     }
 
     .statement {
@@ -62,6 +58,9 @@
     .contact {
       font-weight: bold;
       color: #ffcccb;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .footer-logo {
@@ -69,9 +68,32 @@
     }
 
     .footer-logo img {
-      width: 150px;
+      width: 80px;
       height: auto;
       opacity: 0.8;
+    }
+
+    .social {
+      margin-top: 10px;
+    }
+
+    .social a {
+      color: #add8e6;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .social a:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
     }
   </style>
 </head>
@@ -92,9 +114,24 @@
     </main>
 
     <footer>
-      Kontakt: <span class="contact">kontakt@umsjagatowo.pl</span>
+      <div class="contact">
+        <!-- Ikona koperty -->
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 4h20v16H2V4zm18 2l-8 5-8-5v12h16V6zm-8 3l8-5H4l8 5z"/>
+        </svg>
+        kontakt@umsjagatowo.pl
+      </div>
       <div class="footer-logo">
         <img src="logo.png" alt="Logo UMS Jagatowo">
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/mdp.ddp.jagatowo" target="_blank">
+          <!-- Ikona Facebooka -->
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5.006 3.662 9.13 8.438 9.878v-6.987h-2.54v-2.891h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.891h-2.33v6.987C18.338 21.13 22 17.006 22 12z"/>
+          </svg>
+          Facebook
+        </a>
       </div>
     </footer>
   </div>
